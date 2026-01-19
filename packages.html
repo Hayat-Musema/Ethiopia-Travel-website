@@ -1,62 +1,73 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Packages | Ethiopia Travel</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Packages — Discover Ethiopia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<div class="pattern"></div>
-
-<header>
-    <h1>Travel Packages</h1>
-    <nav>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="brand">Discover Ethiopia</div>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="destinations.html">Destinations</a>
+        <a href="about.html">About</a>
         <a href="packages.html">Packages</a>
         <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
-
-<section class="section">
-    <h2>Choose Your Experience</h2>
-
-    <div class="card-container">
-        <div class="card">
-            <img src="https://i.imgur.com/uWkSCV5.jpg">
-            <div class="card-body">
-                <h3>Historical Route</h3>
-                Lalibela, Axum, Gondar <br>
-                <strong>$450</strong>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://i.imgur.com/PQczwyG.jpg">
-            <div class="card-body">
-                <h3>Adventure Route</h3>
-                Simien Mountains + Bale Mountains <br>
-                <strong>$520</strong>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://i.imgur.com/Fsdh2u9.jpg">
-            <div class="card-body">
-                <h3>Cultural Coffee Journey</h3>
-                Harar + Jimma + Addis <br>
-                <strong>$390</strong>
-            </div>
-        </div>
+      </nav>
+      <a class="cta" href="packages.html">Plan Your Trip</a>
     </div>
-</section>
+  </header>
 
-<footer>
-    © 2025 Ethiopia Travel
-</footer>
+  <main class="packages-page">
+    <section class="packages-hero">
+      <div class="dest-hero-inner">
+        <h2>Travel Packages</h2>
+        <p class="muted">Curated itineraries across Ethiopia — customizable by duration, theme, and budget.</p>
+      </div>
+    </section>
 
+    <section class="packages-filters">
+      <div class="dest-hero-inner">
+        <div class="filters">
+          <input id="pkgSearch" type="search" placeholder="Search packages e.g. Simien trek, cultural Lalibela">
+          <select id="pkgDuration">
+            <option value="all">Any Duration</option>
+            <option value="2-3">2-3 days</option>
+            <option value="4-7">4-7 days</option>
+            <option value="8plus">8+ days</option>
+          </select>
+          <select id="pkgTheme">
+            <option value="all">All Themes</option>
+            <option value="adventure">Adventure</option>
+            <option value="culture">Culture</option>
+            <option value="wildlife">Wildlife</option>
+          </select>
+          <button id="pkgApply" class="apply">Apply</button>
+          <button id="pkgClear" class="clear">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages-grid-section">
+      <div id="pkgGrid" class="featured-grid">
+        <!-- packages rendered by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="brand">Discover Ethiopia</div>
+      <div class="legal">&copy; 2026 Discover Ethiopia. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
